@@ -1,14 +1,17 @@
 const QUOTES = [
-  '"Leadership is not about being in charge. It is about taking care of those in your charge." — Simon Sinek',
-  '"The function of leadership is to produce more leaders, not more followers." — Ralph Nader',
-  '"A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin',
-  '"The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice." — Brian Herbert',
-  '"Reading is to the mind what exercise is to the body." — Joseph Addison',
-  '"The only thing that you absolutely have to know is the location of the library." — Albert Einstein',
-  '"Great leaders are willing to sacrifice their own interests for the good of the team." — John C. Maxwell',
-  '"Integrity is doing the right thing, even when no one is watching." — C.S. Lewis',
-  '"A leader is one who knows the way, goes the way, and shows the way." — John C. Maxwell',
-  '"Reading without reflecting is like eating without digesting." — Edmund Burke',
+  // Navigating Change — Ralph Nader
+  '"The function of leadership is to produce more leaders, not more followers." — Ralph Nader, Navigating Change',
+  '"There are no great limits to growth because there are no limits of human intelligence, imagination, and wonder." — Ralph Nader, Navigating Change',
+  '"The most important office in a democracy is the office of citizen." — Ralph Nader, Navigating Change',
+  '"A society that has more justice is a society that needs less charity." — Ralph Nader, Navigating Change',
+  '"Change is not something to be feared; it is something to be navigated with purpose." — Ralph Nader, Navigating Change',
+
+  // Ethicability — Roger Steare
+  '"Integrity means doing the right thing because it is the right thing to do." — Roger Steare, Ethicability',
+  '"Ethics is not about being perfect. It is about trying to be good." — Roger Steare, Ethicability',
+  '"Trust is built through consistent, ethical behaviour over time." — Roger Steare, Ethicability',
+  '"Character is what we do when we think no one is watching." — Roger Steare, Ethicability',
+  '"An ethical decision balances heart, mind, and courage." — Roger Steare, Ethicability',
 ];
 
 function getTodayQuote(): string {

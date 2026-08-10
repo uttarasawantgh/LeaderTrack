@@ -1,4 +1,4 @@
-export type BookId = "navigating-change" | "ethicability";
+export type BookId = string;
 
 export type TimeOption = 15 | 30 | 45 | 60;
 

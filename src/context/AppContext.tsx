@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer, type ReactNode } from "react";
-import type { AppData, BookId, SessionLog } from "../types";
+import type { AppData, Book, BookId, SessionLog } from "../types";
 import { INITIAL_DATA } from "../types";
 import { appReducer, loadData, saveData, type AppAction } from "./appReducer";
 
@@ -10,6 +10,7 @@ interface AppContextValue {
     addSession: (session: SessionLog) => void;
     toggleBedtime: (date: string, bookId: BookId) => void;
     updateBookProgress: (bookId: BookId, currentPage: number) => void;
+    addBook: (book: Book) => void;
   };
 }
 
@@ -31,6 +32,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       dispatch({ type: "TOGGLE_BEDTIME", payload: { date, bookId } }),
     updateBookProgress: (bookId, currentPage) =>
       dispatch({ type: "UPDATE_BOOK_PROGRESS", payload: { bookId, currentPage } }),
+    addBook: (book) => dispatch({ type: "ADD_BOOK", payload: book }),
   };
 
   return (

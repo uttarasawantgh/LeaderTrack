@@ -44,7 +44,8 @@ export type AppAction =
   | { type: "LOAD_DATA"; payload: AppData }
   | { type: "ADD_SESSION"; payload: SessionLog }
   | { type: "TOGGLE_BEDTIME"; payload: { date: string; bookId: BookId } }
-  | { type: "UPDATE_BOOK_PROGRESS"; payload: { bookId: BookId; currentPage: number } };
+  | { type: "UPDATE_BOOK_PROGRESS"; payload: { bookId: BookId; currentPage: number } }
+  | { type: "ADD_BOOK"; payload: Book };
 
 export function appReducer(state: AppData, action: AppAction): AppData {
   switch (action.type) {
@@ -136,6 +137,17 @@ export function appReducer(state: AppData, action: AppAction): AppData {
       return {
         ...state,
         books: newBooks,
+      };
+    }
+
+    case "ADD_BOOK": {
+      // Don't add a book with the same id
+      if (state.books.some((b) => b.id === action.payload.id)) {
+        return state;
+      }
+      return {
+        ...state,
+        books: [...state.books, action.payload],
       };
     }
 

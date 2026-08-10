@@ -35,8 +35,8 @@
 
 | Category | Initial Allocation | Remaining Balance |
 | :--- | :--- | :--- |
-| **v0 by Vercel** | $50.00 | $47.10 |
-| **Total Project Credit** | **$50.00** | **$47.10** |
+| **v0 by Vercel** | $50.00 | $45.79 |
+| **Total Project Credit** | **$50.00** | **$45.79** |
 
 ---
 
